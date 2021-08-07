@@ -1,6 +1,5 @@
 import 'package:celebi_project/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'components/body.dart';
 
@@ -15,8 +14,11 @@ class _HomeViewState extends State<HomeView> {
   final searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Body(searchController: searchController),
+    return SafeArea(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: Body(searchController: searchController),
+      ),
     );
   }
 }
