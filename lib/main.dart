@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
             //To support the following, you need to use the first initialization method
             button: TextStyle(fontSize: 20)),
       ),
-      home: CreateRoutePage(),
+      home: HomeView(),
     );
   }
 }
