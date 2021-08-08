@@ -1,4 +1,6 @@
-import 'package:celebi_project/model/place.dart';
+import 'package:celebi_project/models/place.dart';
+import 'package:celebi_project/pages/main/detail/detail_view.dart';
+
 import 'package:flutter/material.dart';
 import 'package:masonry_grid/masonry_grid.dart';
 import '../../../../extensions/context_extension.dart';
@@ -124,6 +126,7 @@ class PopularPlaces extends StatelessWidget {
           children: [
             InkWell(
               splashColor: Colors.grey,
+              highlightColor: Colors.transparent,
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(14.0),
                   child: Stack(
@@ -176,15 +179,12 @@ class PopularPlaces extends StatelessWidget {
                     ],
                   )),
               onTap: () {
-                /* Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ImageDetailPage(
-                index: index,
-                orderValue: orderValue,
-              ),
-            ),
-          ); */
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailPage(),
+                  ),
+                );
               },
             ),
           ],

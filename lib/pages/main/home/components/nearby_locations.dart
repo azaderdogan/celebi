@@ -1,5 +1,6 @@
-import 'package:celebi_project/extensions/context_extension.dart';
-import 'package:celebi_project/model/place.dart';
+import 'package:celebi_project/models/place.dart';
+
+import '../../../../extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class NearbyLocations extends StatelessWidget {
